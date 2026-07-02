@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository documents the design, implementation, and operational handoff of a Microsoft Entra Identity Governance deployment for the OmniVerse environment.
+This repository documents the design, implementation, validation, automation, and operational handoff of a Microsoft Entra ID Identity Governance deployment for the OmniVerse environment.
 
 Identity Governance extends the Zero Trust foundation built in IAM-004 by layering privileged access management, entitlement automation, access certification, and governance reporting on top of the existing Conditional Access baseline.
 
@@ -28,6 +28,7 @@ The IAM Engineering team was tasked with designing and deploying a full Microsof
 | [04 - Access Reviews](04-access-reviews/README.md) | Quarterly certification campaigns, reviewer assignment, auto-remediation |
 | [05 - Governance Automation](05-governance-automation/README.md) | PowerShell export and audit scripts |
 | [06 - Operational Handoff](06-operational-handoff/README.md) | Runbook, quarterly operations, future roadmap |
+| [Governance Design](docs/) | SoD matrix, PIM workflow, operating model |
 
 ---
 
@@ -44,30 +45,106 @@ flowchart LR
 
 ---
 
-## Governance Capabilities Deployed
+## Technical Implementation
 
-| Capability | Tool | Status |
-|---|---|---|
-| Privileged Identity Management | Microsoft Entra PIM | Configured |
-| Just-In-Time Access | PIM Eligible Assignments | Configured |
-| Entitlement Management | Access Packages and Catalogs | Configured |
-| Access Request Workflow | Approval Chains | Configured |
-| Quarterly Access Reviews | Microsoft Entra Access Reviews | Configured |
-| Governance Audit Automation | PowerShell + Microsoft Graph | Configured |
+### Privileged Identity Management
+
+| Capability | Configuration |
+|---|---|
+| Assignment Type | Eligible |
+| MFA on Activation | Required |
+| Business Justification | Required |
+| Approval Workflow | Security Team |
+| Maximum Duration | 4 Hours |
+| Notifications | Email Enabled |
+
+### Entitlement Management
+
+| Component | Configuration |
+|---|---|
+| Catalog | Enterprise Resources Catalog |
+| Access Package | Engineering Onboarding |
+| Approval Policy | Manager approval required |
+| Lifecycle Policy | 90-day expiration with review |
+
+### Access Reviews
+
+| Setting | Value |
+|---|---|
+| Frequency | Quarterly |
+| Reviewers | Managers and Resource Owners |
+| Decision Helpers | Enabled |
+| Auto Apply Results | Enabled |
+| Default Decision | Deny |
+
+### Governance Design
+
+| Document | Purpose |
+|---|---|
+| [Separation of Duties Matrix](docs/01-Separation-of-Duties-Matrix.md) | Role conflict identification and prevention |
+| [Privileged Identity Workflow](docs/02-Privileged-Identity-Workflow.md) | End-to-end JIT access lifecycle |
+| [Identity Governance Operating Model](docs/03-Identity-Governance-Operating-Model.md) | Governance program structure and principles |
+
+---
+
+## Governance Principles
+
+| Principle | Application |
+|---|---|
+| Verify Explicitly | MFA and justification required at every activation |
+| Least Privilege | No standing admin access — eligible assignments only |
+| Just-In-Time Administration | Roles activated on demand, expire automatically |
+| Continuous Verification | Quarterly reviews and continuous audit logging |
+
+---
+
+## Screenshot Evidence
+
+### Privileged Identity Management
+
+| Screenshot | Description |
+|---|---|
+| 04-pim-roles.png | Microsoft Entra PIM roles overview |
+| 05-pim-global-administrator-role.png | Global Administrator role selected for PIM |
+| 06-pim-eligible-role-assignment.png | Eligible assignment configuration |
+| 07-pim-activation-settings.png | Activation settings including MFA and duration |
+| 19-pim-role-assignments.png | PIM role assignments confirmed |
+| 20-pim-role-settings-summary.png | Final PIM role settings summary |
+
+### Entitlement Management
+
+| Screenshot | Description |
+|---|---|
+| 09-identity-governance-catalog.png | Enterprise Resources Catalog created |
+| 10-access-package-basics.png | Access package basic configuration |
+| 11-access-package-resource-roles.png | Resource roles assigned to the package |
+| 12-access-package-request-policy.png | Request and approval policy configured |
+| 13-access-package-lifecycle-review.png | Lifecycle and review policy configured |
+| 14-access-package-summary.png | Access package summary and confirmation |
+
+### Access Reviews
+
+| Screenshot | Description |
+|---|---|
+| 15-create-access-review.png | Access review creation workflow |
+| 16-access-review-schedule.png | Quarterly review schedule configured |
+| 17-access-review-settings.png | Reviewer settings and decision helpers |
+| 18-access-review-summary.png | Access review summary and confirmation |
 
 ---
 
 ## Skills Demonstrated
 
-- Microsoft Entra Privileged Identity Management (PIM)
+- Microsoft Entra Identity Governance
+- Privileged Identity Management (PIM)
 - Just-In-Time Access Design
 - Entitlement Management and Access Packages
 - Catalog Design and Resource Governance
 - Access Review Campaign Management
+- Separation of Duties Governance
 - Approval Workflow Configuration
-- Governance Automation with Microsoft Graph PowerShell
-- Identity Governance Documentation
-- Operational Runbook Development
+- Microsoft Graph PowerShell Automation
+- Zero Trust Identity Principles
 
 ---
 
