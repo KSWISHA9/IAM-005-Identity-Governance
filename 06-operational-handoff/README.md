@@ -64,6 +64,6 @@ This document provides the information required for the operations team to maint
 | Administrative Units for delegated management | High |
 | Custom Security Attributes for classification | Medium |
 | Identity Secure Score improvement program | Medium |
-| Integration with ServiceNow for access requests | Medium |
+| Integration with an ITSM access request workflow | Medium |
 | Privileged Access Workstations (PAW) | Low |
 | Integration with SailPoint or Saviynt | Low |
