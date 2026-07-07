@@ -102,34 +102,105 @@ flowchart LR
 
 ### Privileged Identity Management
 
-| Screenshot | Description |
-|---|---|
-| 04-pim-roles.png | Microsoft Entra PIM roles overview |
-| 05-pim-global-administrator-role.png | Global Administrator role selected for PIM |
-| 06-pim-eligible-role-assignment.png | Eligible assignment configuration |
-| 07-pim-activation-settings.png | Activation settings including MFA and duration |
-| 19-pim-role-assignments.png | PIM role assignments confirmed |
-| 20-pim-role-settings-summary.png | Final PIM role settings summary |
+#### PIM Roles Overview
+
+![PIM roles overview](screenshots/04-pim-roles.png)
+
+Shows the Microsoft Entra PIM role inventory used to identify privileged roles for governance.
+
+#### Global Administrator Role
+
+![Global Administrator role selected for PIM](screenshots/05-pim-global-administrator-role.png)
+
+Shows the Global Administrator role selected for privileged access governance.
+
+#### Eligible Role Assignment
+
+![Eligible role assignment](screenshots/06-pim-eligible-role-assignment.png)
+
+Shows eligible assignment configuration so privileged access is available only when activated.
+
+#### Activation Settings
+
+![PIM activation settings](screenshots/07-pim-activation-settings.png)
+
+Shows activation requirements including MFA, justification, activation duration, and approval controls.
+
+#### PIM Role Assignments
+
+![PIM role assignments](screenshots/19-pim-role-assignments.png)
+
+Shows privileged role assignments after PIM configuration.
+
+#### PIM Role Settings Summary
+
+![PIM role settings summary](screenshots/20-pim-role-settings-summary.png)
+
+Shows the final role settings summary used to validate the PIM deployment.
 
 ### Entitlement Management
 
-| Screenshot | Description |
-|---|---|
-| 09-identity-governance-catalog.png | Enterprise Resources Catalog created |
-| 10-access-package-basics.png | Access package basic configuration |
-| 11-access-package-resource-roles.png | Resource roles assigned to the package |
-| 12-access-package-request-policy.png | Request and approval policy configured |
-| 13-access-package-lifecycle-review.png | Lifecycle and review policy configured |
-| 14-access-package-summary.png | Access package summary and confirmation |
+#### Identity Governance Catalog
+
+![Identity governance catalog](screenshots/09-identity-governance-catalog.png)
+
+Shows the Enterprise Resources Catalog created for access package governance.
+
+#### Access Package Basics
+
+![Access package basics](screenshots/10-access-package-basics.png)
+
+Shows the access package baseline configuration.
+
+#### Access Package Resource Roles
+
+![Access package resource roles](screenshots/11-access-package-resource-roles.png)
+
+Shows resource roles assigned to the access package.
+
+#### Access Package Request Policy
+
+![Access package request policy](screenshots/12-access-package-request-policy.png)
+
+Shows the request and approval policy configured for entitlement access.
+
+#### Lifecycle Review Policy
+
+![Access package lifecycle review](screenshots/13-access-package-lifecycle-review.png)
+
+Shows lifecycle expiration and review policy settings for access packages.
+
+#### Access Package Summary
+
+![Access package summary](screenshots/14-access-package-summary.png)
+
+Shows the final access package summary before deployment.
 
 ### Access Reviews
 
-| Screenshot | Description |
-|---|---|
-| 15-create-access-review.png | Access review creation workflow |
-| 16-access-review-schedule.png | Quarterly review schedule configured |
-| 17-access-review-settings.png | Reviewer settings and decision helpers |
-| 18-access-review-summary.png | Access review summary and confirmation |
+#### Create Access Review
+
+![Create access review](screenshots/15-create-access-review.png)
+
+Shows the access review creation workflow used to start certification campaigns.
+
+#### Access Review Schedule
+
+![Access review schedule](screenshots/16-access-review-schedule.png)
+
+Shows the quarterly review schedule configured for recurring governance.
+
+#### Access Review Settings
+
+![Access review settings](screenshots/17-access-review-settings.png)
+
+Shows reviewer settings, decision helpers, and remediation behavior.
+
+#### Access Review Summary
+
+![Access review summary](screenshots/18-access-review-summary.png)
+
+Shows the final access review summary and confirmation before deployment.
 
 ---
 
