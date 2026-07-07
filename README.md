@@ -223,9 +223,9 @@ Shows the final access review summary and confirmation before deployment.
 
 | Project | Description |
 |---|---|
-| [IAM-001 Hybrid Identity](https://github.com/KSWISHA9/hybrid-identity-engineering) | Active Directory and Microsoft Entra Connect |
-| [IAM-002 Identity Lifecycle](https://github.com/KSWISHA9/IAM-002-Identity-Lifecycle-Automation) | Joiner-Mover-Leaver automation |
-| [IAM-003 Enterprise SSO](https://github.com/KSWISHA9/enterprise-application-onboarding-sso) | Enterprise application onboarding |
+| [IAM-001 Hybrid Identity](https://github.com/KSWISHA9/IAM-001-Hybrid-Identity-Engineering) | Active Directory and Microsoft Entra Connect |
+| [IAM-003 Identity Lifecycle](https://github.com/KSWISHA9/IAM-003-Identity-Lifecycle-Automation) | Joiner-Mover-Leaver automation |
+| [IAM-002 Enterprise SSO](https://github.com/KSWISHA9/IAM-002-Enterprise-Application-Onboarding-SSO) | Enterprise application onboarding |
 | [IAM-004 Zero Trust](https://github.com/KSWISHA9/IAM-004-Conditional-Access-Zero-Trust) | Conditional Access baseline |
 
 ---
