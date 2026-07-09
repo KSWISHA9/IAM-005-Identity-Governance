@@ -14,7 +14,7 @@ Identity Governance extends the Zero Trust foundation built in IAM-004 by layeri
 
 OmniVerse completed its Zero Trust Conditional Access deployment and identified significant governance gaps — permanent administrator assignments, no access request workflows, no recurring certification campaigns, and no privileged access audit trail.
 
-The IAM Engineering team was tasked with designing and deploying a full Microsoft Entra Identity Governance program to address these gaps before the environment moves into production.
+The IAM Engineering team was tasked with designing and deploying a full Microsoft Entra Identity Governance program to address these gaps before broader user onboarding.
 
 ---
 
@@ -29,6 +29,14 @@ The IAM Engineering team was tasked with designing and deploying a full Microsof
 | [05 - Governance Automation](05-governance-automation/README.md) | PowerShell export and audit scripts |
 | [06 - Operational Handoff](06-operational-handoff/README.md) | Runbook, quarterly operations, future roadmap |
 | [Governance Design](docs/) | SoD matrix, PIM workflow, operating model |
+
+## Evidence Links
+
+- [View all screenshots](screenshots/)
+- [Review the PIM deployment evidence](02-pim-deployment/README.md)
+- [Review the entitlement management evidence](03-entitlement-management/README.md)
+- [Review the access review evidence](04-access-reviews/README.md)
+- [Review the governance design documents](docs/)
 
 ---
 
@@ -49,33 +57,32 @@ flowchart LR
 
 ### Privileged Identity Management
 
-| Capability | Configuration |
-|---|---|
-| Assignment Type | Eligible |
-| MFA on Activation | Required |
-| Business Justification | Required |
-| Approval Workflow | Security Team |
-| Maximum Duration | 4 Hours |
-| Notifications | Email Enabled |
+| Control | What It Does | Evidence |
+|---|---|---|
+| Eligible role assignment | Removes standing privileged access by requiring users to activate roles only when needed. | [Screenshot](screenshots/06-pim-eligible-role-assignment.png) |
+| MFA on activation | Forces strong authentication before privileged roles can be activated. | [Screenshot](screenshots/07-pim-activation-settings.png) |
+| Business justification | Requires users to document why privileged access is needed. | [Screenshot](screenshots/07-pim-activation-settings.png) |
+| Approval workflow | Routes privileged activation requests through the security team. | [PIM deployment](02-pim-deployment/README.md) |
+| Four-hour activation window | Limits privileged access duration and automatically expires elevated permissions. | [Screenshot](screenshots/20-pim-role-settings-summary.png) |
 
 ### Entitlement Management
 
-| Component | Configuration |
-|---|---|
-| Catalog | Enterprise Resources Catalog |
-| Access Package | Engineering Onboarding |
-| Approval Policy | Manager approval required |
-| Lifecycle Policy | 90-day expiration with review |
+| Control | What It Does | Evidence |
+|---|---|---|
+| Enterprise Resources Catalog | Groups governed resources into a controlled access request catalog. | [Screenshot](screenshots/09-identity-governance-catalog.png) |
+| Engineering Onboarding access package | Provides a repeatable access bundle for onboarding scenarios. | [Screenshot](screenshots/10-access-package-basics.png) |
+| Manager approval | Requires approval before users receive access package assignments. | [Screenshot](screenshots/12-access-package-request-policy.png) |
+| 90-day expiration and review | Prevents stale access by requiring renewal and review after a defined period. | [Screenshot](screenshots/13-access-package-lifecycle-review.png) |
 
 ### Access Reviews
 
-| Setting | Value |
-|---|---|
-| Frequency | Quarterly |
-| Reviewers | Managers and Resource Owners |
-| Decision Helpers | Enabled |
-| Auto Apply Results | Enabled |
-| Default Decision | Deny |
+| Control | What It Does | Evidence |
+|---|---|---|
+| Quarterly review cadence | Creates recurring certification campaigns for privileged and business access. | [Screenshot](screenshots/16-access-review-schedule.png) |
+| Manager and resource owner reviewers | Assigns certification decisions to the people closest to the access need. | [Screenshot](screenshots/17-access-review-settings.png) |
+| Decision helpers | Gives reviewers sign-in and recommendation context during certification. | [Screenshot](screenshots/17-access-review-settings.png) |
+| Auto-apply results | Applies review outcomes without requiring manual cleanup. | [Screenshot](screenshots/18-access-review-summary.png) |
+| Default decision: deny | Reduces access risk when reviewers do not explicitly approve continued access. | [Screenshot](screenshots/18-access-review-summary.png) |
 
 ### Governance Design
 
@@ -84,6 +91,16 @@ flowchart LR
 | [Separation of Duties Matrix](docs/01-Separation-of-Duties-Matrix.md) | Role conflict identification and prevention |
 | [Privileged Identity Workflow](docs/02-Privileged-Identity-Workflow.md) | End-to-end JIT access lifecycle |
 | [Identity Governance Operating Model](docs/03-Identity-Governance-Operating-Model.md) | Governance program structure and principles |
+
+---
+
+## What This Proves
+
+- Designed a governance model that removes permanent administrator access.
+- Built PIM controls for just-in-time activation, MFA, justification, approval, and time-bound elevation.
+- Created entitlement management workflows for access packages, manager approval, expiration, and lifecycle review.
+- Configured recurring access reviews with reviewer assignment, decision helpers, and automatic remediation.
+- Documented separation of duties, privileged access workflow, operating model, automation, and handoff.
 
 ---
 
@@ -98,7 +115,9 @@ flowchart LR
 
 ---
 
-## Screenshot Evidence
+## Evidence Gallery
+
+The screenshots below show the key governance build evidence. The complete evidence set is available in the [screenshots folder](screenshots/).
 
 ### Privileged Identity Management
 
