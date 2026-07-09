@@ -53,68 +53,6 @@ flowchart LR
 
 ---
 
-## Technical Implementation
-
-### Privileged Identity Management
-
-| Control | What It Does | Evidence |
-|---|---|---|
-| Eligible role assignment | Removes standing privileged access by requiring users to activate roles only when needed. | [Screenshot](screenshots/06-pim-eligible-role-assignment.png) |
-| MFA on activation | Forces strong authentication before privileged roles can be activated. | [Screenshot](screenshots/07-pim-activation-settings.png) |
-| Business justification | Requires users to document why privileged access is needed. | [Screenshot](screenshots/07-pim-activation-settings.png) |
-| Approval workflow | Routes privileged activation requests through the security team. | [PIM deployment](02-pim-deployment/README.md) |
-| Four-hour activation window | Limits privileged access duration and automatically expires elevated permissions. | [Screenshot](screenshots/20-pim-role-settings-summary.png) |
-
-### Entitlement Management
-
-| Control | What It Does | Evidence |
-|---|---|---|
-| Enterprise Resources Catalog | Groups governed resources into a controlled access request catalog. | [Screenshot](screenshots/09-identity-governance-catalog.png) |
-| Engineering Onboarding access package | Provides a repeatable access bundle for onboarding scenarios. | [Screenshot](screenshots/10-access-package-basics.png) |
-| Manager approval | Requires approval before users receive access package assignments. | [Screenshot](screenshots/12-access-package-request-policy.png) |
-| 90-day expiration and review | Prevents stale access by requiring renewal and review after a defined period. | [Screenshot](screenshots/13-access-package-lifecycle-review.png) |
-
-### Access Reviews
-
-| Control | What It Does | Evidence |
-|---|---|---|
-| Quarterly review cadence | Creates recurring certification campaigns for privileged and business access. | [Screenshot](screenshots/16-access-review-schedule.png) |
-| Manager and resource owner reviewers | Assigns certification decisions to the people closest to the access need. | [Screenshot](screenshots/17-access-review-settings.png) |
-| Decision helpers | Gives reviewers sign-in and recommendation context during certification. | [Screenshot](screenshots/17-access-review-settings.png) |
-| Auto-apply results | Applies review outcomes without requiring manual cleanup. | [Screenshot](screenshots/18-access-review-summary.png) |
-| Default decision: deny | Reduces access risk when reviewers do not explicitly approve continued access. | [Screenshot](screenshots/18-access-review-summary.png) |
-
-### Governance Design
-
-| Document | Purpose |
-|---|---|
-| [Separation of Duties Matrix](docs/01-Separation-of-Duties-Matrix.md) | Role conflict identification and prevention |
-| [Privileged Identity Workflow](docs/02-Privileged-Identity-Workflow.md) | End-to-end JIT access lifecycle |
-| [Identity Governance Operating Model](docs/03-Identity-Governance-Operating-Model.md) | Governance program structure and principles |
-
----
-
-## What This Proves
-
-- Designed a governance model that removes permanent administrator access.
-- Built PIM controls for just-in-time activation, MFA, justification, approval, and time-bound elevation.
-- Created entitlement management workflows for access packages, manager approval, expiration, and lifecycle review.
-- Configured recurring access reviews with reviewer assignment, decision helpers, and automatic remediation.
-- Documented separation of duties, privileged access workflow, operating model, automation, and handoff.
-
----
-
-## Governance Principles
-
-| Principle | Application |
-|---|---|
-| Verify Explicitly | MFA and justification required at every activation |
-| Least Privilege | No standing admin access — eligible assignments only |
-| Just-In-Time Administration | Roles activated on demand, expire automatically |
-| Continuous Verification | Quarterly reviews and continuous audit logging |
-
----
-
 ## Evidence Gallery
 
 The screenshots below show the key governance build evidence. The complete evidence set is available in the [screenshots folder](screenshots/).
@@ -220,6 +158,68 @@ Shows reviewer settings, decision helpers, and remediation behavior.
 ![Access review summary](screenshots/18-access-review-summary.png)
 
 Shows the final access review summary and confirmation before deployment.
+
+---
+
+## Technical Implementation
+
+### Privileged Identity Management
+
+| Control | What It Does | Evidence |
+|---|---|---|
+| Eligible role assignment | Removes standing privileged access by requiring users to activate roles only when needed. | [Screenshot](screenshots/06-pim-eligible-role-assignment.png) |
+| MFA on activation | Forces strong authentication before privileged roles can be activated. | [Screenshot](screenshots/07-pim-activation-settings.png) |
+| Business justification | Requires users to document why privileged access is needed. | [Screenshot](screenshots/07-pim-activation-settings.png) |
+| Approval workflow | Routes privileged activation requests through the security team. | [PIM deployment](02-pim-deployment/README.md) |
+| Four-hour activation window | Limits privileged access duration and automatically expires elevated permissions. | [Screenshot](screenshots/20-pim-role-settings-summary.png) |
+
+### Entitlement Management
+
+| Control | What It Does | Evidence |
+|---|---|---|
+| Enterprise Resources Catalog | Groups governed resources into a controlled access request catalog. | [Screenshot](screenshots/09-identity-governance-catalog.png) |
+| Engineering Onboarding access package | Provides a repeatable access bundle for onboarding scenarios. | [Screenshot](screenshots/10-access-package-basics.png) |
+| Manager approval | Requires approval before users receive access package assignments. | [Screenshot](screenshots/12-access-package-request-policy.png) |
+| 90-day expiration and review | Prevents stale access by requiring renewal and review after a defined period. | [Screenshot](screenshots/13-access-package-lifecycle-review.png) |
+
+### Access Reviews
+
+| Control | What It Does | Evidence |
+|---|---|---|
+| Quarterly review cadence | Creates recurring certification campaigns for privileged and business access. | [Screenshot](screenshots/16-access-review-schedule.png) |
+| Manager and resource owner reviewers | Assigns certification decisions to the people closest to the access need. | [Screenshot](screenshots/17-access-review-settings.png) |
+| Decision helpers | Gives reviewers sign-in and recommendation context during certification. | [Screenshot](screenshots/17-access-review-settings.png) |
+| Auto-apply results | Applies review outcomes without requiring manual cleanup. | [Screenshot](screenshots/18-access-review-summary.png) |
+| Default decision: deny | Reduces access risk when reviewers do not explicitly approve continued access. | [Screenshot](screenshots/18-access-review-summary.png) |
+
+### Governance Design
+
+| Document | Purpose |
+|---|---|
+| [Separation of Duties Matrix](docs/01-Separation-of-Duties-Matrix.md) | Role conflict identification and prevention |
+| [Privileged Identity Workflow](docs/02-Privileged-Identity-Workflow.md) | End-to-end JIT access lifecycle |
+| [Identity Governance Operating Model](docs/03-Identity-Governance-Operating-Model.md) | Governance program structure and principles |
+
+---
+
+## What This Proves
+
+- Designed a governance model that removes permanent administrator access.
+- Built PIM controls for just-in-time activation, MFA, justification, approval, and time-bound elevation.
+- Created entitlement management workflows for access packages, manager approval, expiration, and lifecycle review.
+- Configured recurring access reviews with reviewer assignment, decision helpers, and automatic remediation.
+- Documented separation of duties, privileged access workflow, operating model, automation, and handoff.
+
+---
+
+## Governance Principles
+
+| Principle | Application |
+|---|---|
+| Verify Explicitly | MFA and justification required at every activation |
+| Least Privilege | No standing admin access — eligible assignments only |
+| Just-In-Time Administration | Roles activated on demand, expire automatically |
+| Continuous Verification | Quarterly reviews and continuous audit logging |
 
 ---
 
