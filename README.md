@@ -2,6 +2,12 @@
 
 > OmniVerse Enterprise Engineering Portfolio
 
+![Microsoft Entra ID](https://img.shields.io/badge/Microsoft%20Entra%20ID-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Identity Governance](https://img.shields.io/badge/Identity%20Governance-111827?style=for-the-badge&logo=microsoft&logoColor=white)
+![PIM](https://img.shields.io/badge/PIM-7C3AED?style=for-the-badge&logo=microsoft&logoColor=white)
+![Access Reviews](https://img.shields.io/badge/Access%20Reviews-0F766E?style=for-the-badge&logo=microsoft&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+
 ## Overview
 
 This repository documents the design, implementation, validation, automation, and operational handoff of a Microsoft Entra ID Identity Governance deployment for the OmniVerse environment.
